@@ -4,6 +4,10 @@ var router = express.Router();
 module.exports = function(app){
   app.route('/data')
     .get(function(req,res){
-      res.send({"test": "It is working fine"});
+      var response = {
+        Test: "It is working",
+        Description: 2
+      };
+      res.send(response);
     });
 }
