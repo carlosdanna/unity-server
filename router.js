@@ -15,7 +15,7 @@ module.exports = function(app){
     //Testing post api call
     .post(function(req,res){
       console.log(req.body);
-      var response = req.body;
+      var response = {"success": "Congratulations you made it"};
       res.send(response);
     });
 }
