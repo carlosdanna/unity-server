@@ -23,7 +23,6 @@ module.exports = {
     });
 
   },
-
   getPlayers : function(req, res){
     var response ={};
     Players.find({},function(err,data){
@@ -36,7 +35,20 @@ module.exports = {
         res.json(response);
       }
     });
+  },
 
+  getPlayer : function(req,res){
+    var response = {};
+    console.log(req);
+    Players.find({'_id': req.query._id}).exec(function(err,data){
+      if (err){
+        response = {error: true, data: "Something really bad happened"};
+        res.json(response);
+      }
+      else{
+        response = {error: false, data: data};
+        res.json(response);
+      }
+    });
   }
-
-};
+}

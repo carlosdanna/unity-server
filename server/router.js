@@ -7,7 +7,7 @@ module.exports = function(app){
   app.route('/data')
     //testing get api call
     .get(function(req,res){
-      playerCalls.getPlayers(req,res);
+      playerCalls.getPlayer(req,res);
     })
 
     //Testing post api call

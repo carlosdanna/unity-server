@@ -9,4 +9,5 @@ var players = new Schema({
 
 
 var Players = mongoose.model('Players',players);
+
 module.exports = Players;
